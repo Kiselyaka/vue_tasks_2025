@@ -1,14 +1,18 @@
 <script>
 	export default {
-		data() {
-	return {
-		obj: {x: 1, y: 2, z: 3},
+	data() {
+		return{
+		currentDate: new Date().toLocaleDateString(),
+	}},
+	methods: {
+		showDate() {
+      	alert(this.currentDate); 
+    },
 	}
 }
-}
-
 </script>
 
 <template>
-	{{ obj.x+obj.y+obj.z }}
+	<p>Текущая дата:</p>
+    <button @click="showDate">Показать дату</button>
 </template>
