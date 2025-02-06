@@ -1,28 +1,19 @@
 <script>
   export default {
-	data() {
-	  return {
-		daysOfWeek: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-	  };
-	},
 	methods: {
-	  getDayName(dayNumber) {
-		if (dayNumber < 0 || dayNumber > 6) {
-		  return 'Некорректный номер дня'; 
-		}
-		return this.daysOfWeek[dayNumber];
+	  show(str) {
+		alert(str); 
 	  },
-	  showCurrentDay() {
-		const currentDayNumber = new Date().getDay();
-		const currentDayName = this.getDayName(currentDayNumber); 
-		alert(currentDayName);
+	  square(number) {
+		return number * number;
 	  },
 	},
-  }
-  </script>
+  };
+</script>
 
 <template>
 	<div>
-	  <button @click="showCurrentDay">Показать текущий день недели</button>
+	  <button @click="show('Квадрат числа 2 равен ' + square(2))">Квадрат 2</button>
+	  <button @click="show('Квадрат числа 3 равен ' + square(3))">Квадрат 3</button>
 	</div>
-</template>
+  </template>
