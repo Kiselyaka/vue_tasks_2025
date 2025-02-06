@@ -1,18 +1,19 @@
 <script>
-	export default {
+  export default {
 	data() {
-		return{
+	  return {
 		currentDate: new Date().toLocaleDateString(),
-	}},
+	  };
+	},
 	methods: {
-		showDate() {
-      	alert(this.currentDate); 
-    },
-	}
-}
+	  showDate() {
+		alert(this.currentDate);
+	  },
+	},
+  }
 </script>
 
 <template>
 	<p>Текущая дата:</p>
-    <button @click="showDate">Показать дату</button>
+	<button @mouseover="showDate">Показать дату</button>
 </template>
