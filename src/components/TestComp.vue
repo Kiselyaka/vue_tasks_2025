@@ -2,16 +2,17 @@
 	export default {
 		data() {
 	return {
-		num1: 1,
-		num2: 2,
-		num3: 3,
-		num: 5,
-	}
+		arr2: [1, 2, 3],	
+		arr1: ['x', 'y', 'z'],
 }
 }
+}
+
 </script>
 
 <template>
-	{{ num }}
-	{{ num1+num2+num3 }}
+	<div>{{arr2[0]+arr2[1]+arr2[2] }}</div>
+	<p><br>{{ arr1[0] }} <br> 
+	{{ arr1[1] }} <br>
+	{{ arr1[2] }} </p>
 </template>
