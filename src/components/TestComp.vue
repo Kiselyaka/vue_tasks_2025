@@ -1,11 +1,15 @@
 <script>
 	export default {
-	name: 'App',
+		data() {
+	return {
+		name: 'john',
+		surn: 'smit',
+	}
+}
 }
 </script>
 
 <template>
-	<div>
-		Hello World
-	</div>
+	<div>{{ name }}</div>
+	<div style="margin-left: 10px;">{{ surn }}</div>
 </template>
