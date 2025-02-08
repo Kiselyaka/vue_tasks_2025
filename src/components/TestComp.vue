@@ -2,23 +2,28 @@
 export default {
   data() {
     return {
-		isAuth: true,
-	}
+      day: this.getDay(),
+    };
   },
   methods: {
-    toggle1: function() {
-      this.isAuth= !this.isAuth; 
-    },
-
+    getDay() {
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const currentDate = new Date();
+      return days[currentDate.getDay()];
+    }
   },
 };
-// нет, ну тебя совесть не мучает ?)
+
 </script>
 
 <template>
-  <div>
-	<p v-if="isAuth">Вы действительно администратор</p>
-	<p v-else>Nonono, mr. fish, попробуйте зайти с ролью Администратор</p>
-	<button @click="toggle1">Выйти/Зайти</button>
-  </div>
-</template>	
+	<div>
+	  <p v-if="day === 'Monday'">Понедельник</p>
+	  <p v-if="day === 'Tuesday'">Вторник</p>
+	  <p v-if="day === 'Wednesday'">Среда</p>
+	  <p v-if="day === 'Thursday'">Четверг</p>
+	  <p v-if="day === 'Friday'">Пятница</p>
+	  <p v-if="day === 'Saturday'">Суббота</p>
+	  <p v-if="day === 'Sunday'">Воскресенье</p>
+	</div>
+  </template>
