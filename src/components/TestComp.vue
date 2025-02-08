@@ -2,15 +2,11 @@
 export default {
   data() {
     return {
-      day: this.getDay(),
+		age: 25,
     };
   },
   methods: {
-    getDay() {
-      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-      const currentDate = new Date();
-      return days[currentDate.getDay()];
-    }
+    
   },
 };
 
@@ -18,12 +14,9 @@ export default {
 
 <template>
 	<div>
-	  <p v-if="day === 'Monday'">Понедельник</p>
-	  <p v-if="day === 'Tuesday'">Вторник</p>
-	  <p v-if="day === 'Wednesday'">Среда</p>
-	  <p v-if="day === 'Thursday'">Четверг</p>
-	  <p v-if="day === 'Friday'">Пятница</p>
-	  <p v-if="day === 'Saturday'">Суббота</p>
-	  <p v-if="day === 'Sunday'">Воскресенье</p>
+	<p v-if="age < 18">подросток</p>
+	<p v-else-if="age >= 19 && age <= 25">молодой человек</p>
+	<p v-else-if="age > 26">мужчина</p>
+	<p v-else>error</p>
 	</div>
   </template>
