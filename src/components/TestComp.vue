@@ -25,15 +25,15 @@ export default {
 <template>
   <div>
   <div>
-	<button @click="toggle1">toggle</button>
+	<button @click="toggle1">{{ visible1 ? 'hide' : 'show' }}</button>
 	<p v-if="visible1">text</p>
   </div>
   <div>
-	<button @click="toggle2">toggle</button>
+	<button @click="toggle2">{{ visible2 ? 'hide' : 'show' }}</button>
 	<p v-if="visible2">text</p>
   </div>
   <div>
-	<button @click="toggle3">toggle</button>
+	<button @click="toggle3">{{ visible3 ? 'hide' : 'show' }}</button>
 	<p v-if="visible3">text</p>
   </div>
   </div>
