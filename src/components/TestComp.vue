@@ -2,24 +2,27 @@
   export default {
 	data() {
 	return {
-		cost: 100,
-		amount: 5,
+		isClick: false,
 	}
 },
-computed: {
-	price: function() {
-		return this.cost * this.amount;
-	}
-},
+
 methods:{
-	change: function(){
-		this.cost = 120;
-	}
+	click: function(){
+		if (!this.isClick) 
+		{
+        this.isClick = true;
+        this.doThis();
+        }
+	},
+	doThis() {
+      console.log('Ссылка была нажата, но перехода не произошло.');
+    },
 }
-};
+}
+
 </script>
 
 <template>
-	<p>Задание 1: Стоимость {{ amount }}-ти морковок с ценой в размере {{ cost }} составляет: {{ price }}</p>
-	<div>Задание 2: <button @click="change">смена цены</button></div>
+	<div>Задача 1: <a href="https://www.google.com/" @click.prevent="bimbim">Попробуй перейти по ссылке</a></div>
+	<div>Задача 2: <a href="https://www.google.com/" @click.prevent="click">Попробуй перейти по ссылке</a></div>
 </template>
