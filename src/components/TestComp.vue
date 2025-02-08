@@ -1,19 +1,26 @@
 <script>
   export default {
+	data() {
+	return {
+		text1: 'xxx',
+		text2: 'ggg',
+	}
+    },
 	methods: {
-	  show(str) {
-		alert(str); 
-	  },
-	  square(number) {
-		return number * number;
-	  },
+	change1: function() {
+		this.text1 = 'yyy';
 	},
-  };
+	change2: function() {
+		this.text2 = 'aaa';
+	}
+    },
+};
 </script>
 
 <template>
-	<div>
-	  <button @click="show('Квадрат числа 2 равен ' + square(2))">Квадрат 2</button>
-	  <button @click="show('Квадрат числа 3 равен ' + square(3))">Квадрат 3</button>
-	</div>
-  </template>
+	<div>Задание 1-2: {{ text1 }} <br />
+	<button @click="change1">text1</button></div>
+	<div style='padding-left: 10px;'>	
+	Задание 3: {{ text2 }} <br />
+	<button @click="change2">text2</button></div>
+</template>
