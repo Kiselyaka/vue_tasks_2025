@@ -1,28 +1,23 @@
 <script>
-  export default {
-	data() {
-	return {
-		isClick: false,
-	}
-},
-
-methods:{
-	click: function(){
-		if (!this.isClick) 
-		{
-        this.isClick = true;
-        this.doThis();
-        }
-	},
-	doThis() {
-      console.log('Ссылка была нажата, но перехода не произошло.');
+export default {
+  data() {
+    return {
+      visible: true, 
+    };
+  },
+  methods: {
+    click: function() {
+      this.visible = !this.visible; 
+      console.log('Текущее значение visible:', this.visible);
     },
-}
-}
-
+  },
+};
 </script>
 
 <template>
-	<div>Задача 1: <a href="https://www.google.com/" @click.prevent="bimbim">Попробуй перейти по ссылке</a></div>
-	<div>Задача 2: <a href="https://www.google.com/" @click.prevent="click">Попробуй перейти по ссылке</a></div>
+  <div>
+    <p v-if="visible">Абзац 1: Этот текст виден, когда visible равно true.</p>
+    <p v-else>Абзац 2: Этот текст виден, когда visible равно false.</p>
+    <button @click="click">Переключить видимость</button>
+  </div>
 </template>
