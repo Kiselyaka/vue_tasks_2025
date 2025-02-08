@@ -2,25 +2,24 @@
   export default {
 	data() {
 	return {
-		text1: 'xxx',
-		text2: 'ggg',
+		cost: 100,
+		amount: 5,
 	}
-    },
-	methods: {
-	change1: function() {
-		this.text1 = 'yyy';
-	},
-	change2: function() {
-		this.text2 = 'aaa';
+},
+computed: {
+	price: function() {
+		return this.cost * this.amount;
 	}
-    },
+},
+methods:{
+	change: function(){
+		this.cost = 120;
+	}
+}
 };
 </script>
 
 <template>
-	<div>Задание 1-2: {{ text1 }} <br />
-	<button @click="change1">text1</button></div>
-	<div style='padding-left: 10px;'>	
-	Задание 3: {{ text2 }} <br />
-	<button @click="change2">text2</button></div>
+	<p>Задание 1: Стоимость {{ amount }}-ти морковок с ценой в размере {{ cost }} составляет: {{ price }}</p>
+	<div>Задание 2: <button @click="change">смена цены</button></div>
 </template>
