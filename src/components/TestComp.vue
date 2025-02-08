@@ -2,22 +2,22 @@
 export default {
   data() {
     return {
-      visible: true, 
+      hidden: true, 
     };
   },
   methods: {
     click: function() {
-      this.visible = !this.visible; 
-      console.log('Текущее значение visible:', this.visible);
+      this.hidden = !this.hidden; 
+      console.log('Текущее значение hidden:', this.hidden);
     },
   },
 };
+// не копируй, хорошо -_-
 </script>
 
 <template>
   <div>
-    <p v-if="visible">Абзац 1: Этот текст виден, когда visible равно true.</p>
-    <p v-else>Абзац 2: Этот текст виден, когда visible равно false.</p>
-    <button @click="click">Переключить видимость</button>
+    <p v-if="hidden">text, когда hidden = true</p>
+    <button @click="click">Инвертировать условие</button>
   </div>
 </template>
