@@ -2,25 +2,21 @@
 export default {
   data() {
     return {
-      hidden: true, 
-	  z2: false,
-	  hidden_z3: true,
+      visible1: false, 
+	  visible2: false,
+	  visible3: false,
     };
   },
   methods: {
-    click: function() {
-      this.hidden = !this.hidden; 
-      console.log('Текущее значение hidden:', this.hidden);
+    toggle1: function() {
+      this.visible1= !this.visible1; 
     },
-	click1: function(){
-		this.z2 = true;
+	toggle2: function(){
+		this.visible2= !this.visible2; 
 	},
-	click2: function(){
-		this.z2 = false;
+	toggle3: function(){
+		this.visible3= !this.visible3; 
 	},
-	click_z3: function() {
-      this.hidden_z3 = !this.hidden_z3; 
-    },
   },
 };
 
@@ -28,14 +24,17 @@ export default {
 
 <template>
   <div>
-    <p v-if="hidden">text, когда hidden = true</p>
-    Задание 1: <button @click="click">Инвертировать условие</button>
-   <div>Задание 2: <p v-if="z2">Ого, абзац показался</p> 
-	<button @click="click1">Показать</button>
-	<button @click="click2">Скрыть</button></div>
-	<div>Задание 3: <p v-if="hidden_z3">Да ну, снова абзац что-ли. А кто-то все еще копирует мой код</p>
-      <button v-if="hidden_z3" @click="click_z3">Скрыть</button>
-      <button v-else @click="click_z3">Показать</button>
-    </div>
+  <div>
+	<button @click="toggle1">toggle</button>
+	<p v-if="visible1">text</p>
+  </div>
+  <div>
+	<button @click="toggle2">toggle</button>
+	<p v-if="visible2">text</p>
+  </div>
+  <div>
+	<button @click="toggle3">toggle</button>
+	<p v-if="visible3">text</p>
+  </div>
   </div>
 </template>	
