@@ -34,7 +34,8 @@ export default {
 	<button @click="click1">Показать</button>
 	<button @click="click2">Скрыть</button></div>
 	<div>Задание 3: <p v-if="hidden_z3">Да ну, снова абзац что-ли. А кто-то все еще копирует мой код</p>
-	<button @click="click_z3">Скрыть/Показать</button>
-	</div>
+      <button v-if="hidden_z3" @click="click_z3">Скрыть</button>
+      <button v-else @click="click_z3">Показать</button>
+    </div>
   </div>
 </template>	
