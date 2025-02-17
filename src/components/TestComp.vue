@@ -32,25 +32,8 @@ export default {
 
 <template>
 	<div>
-	Задача 1:
-	<template>
-  <table>
-    <tr v-for="product in products" :key="product.name">
-      <td>{{ product.name }}</td>
-      <td>{{ product.price }}</td>
-      <td>{{ product.quantity }}</td>
-    </tr>
-  </table>
-</template>
-</div>
-<div>
-	Задача 2:
-	<template>
-  <ul>
-    <li v-for="link in hrefs" :key="link.href">
-      <a :href="link.href">{{ link.text }}</a>
-    </li>
-  </ul>
-</template>
+		<p v-for="num in 30">
+		{{ num }}
+		</p>
 	</div>
   </template>
