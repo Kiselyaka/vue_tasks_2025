@@ -2,13 +2,29 @@
 export default {
   data() {
     return {
-		items: [1, 2, 3],
+		hrefs: [
+			{href: '1.html', text: 'text1'},
+			{href: '2.html', text: 'text2'},
+			{href: '3.html', text: 'text3'},
+		],
+		products: [
+			{
+				name: 'product1',
+				price: 100,
+				quantity: 5
+			},
+			{
+				name: 'product2',
+				price: 200,
+				quantity: 4
+			},
+			{
+				name: 'product3',
+				price: 300,
+				quantity: 3
+			},
+		]
     };
-  },
-  methods: {
-        click: function(){
-			this.hide_swap = !this.hide_swap;
-		}
   },
 };
 
@@ -17,16 +33,24 @@ export default {
 <template>
 	<div>
 	Задача 1:
-		<div v-for="(elem, key) in items">
-    	<p>{{ elem }}</p>
-    	<p class="divider"></p>
-  		</div>
-		  <ul>
+	<template>
+  <table>
+    <tr v-for="product in products" :key="product.name">
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.quantity }}</td>
+    </tr>
+  </table>
+</template>
+</div>
+<div>
 	Задача 2:
-		<template v-for="(elem, key) in items">
-      	<li>{{ elem }}</li>
-      	<li class="divider"></li>
-    	</template>
-  	</ul>
+	<template>
+  <ul>
+    <li v-for="link in hrefs" :key="link.href">
+      <a :href="link.href">{{ link.text }}</a>
+    </li>
+  </ul>
+</template>
 	</div>
   </template>
