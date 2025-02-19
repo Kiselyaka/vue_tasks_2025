@@ -1,35 +1,27 @@
 <script>
-export default {
-  data() {
-	return {
-	  obj: {
-		hidden: true,
-	  },
-	};
-  },
-  methods: {
-	show() {
-	  this.obj.hidden = false; 
+    export default {
+	data() {
+	  return {
+		isValid: true,    
+		isDisabled: false, 
+	  };
 	},
-	hide() {
-	  this.obj.hidden = true; 
-	},
-	toggle() {
-	  this.obj.hidden = !this.obj.hidden; 
-	},
-  },
-};
-</script>
+  };
+  </script>
 
 <template>
-	<div>
-	  <p :class="{active: true, valid: false}">text</p>
-	</div>
+	<p :class="{ valid: isValid, disabled: isDisabled }">
+	  text
+	</p>
   </template>
-  
+
 <style>
-  p.hidden {
-	display: none;
+  .valid {
+	color: green;
+  }
+  
+  .disabled {
+	color: gray; 
+	text-decoration: line-through; 
   }
 </style>
-  
