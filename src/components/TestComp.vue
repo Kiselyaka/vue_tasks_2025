@@ -23,12 +23,7 @@ export default {
 
 <template>
 	<div>
-	  <p :class="{ hidden: obj.hidden }">text</p>
-	  <div>
-		<button @click="show">Show</button>
-		<button @click="hide">Hide</button>
-		<button @click="toggle">Toggle</button>
-	  </div>
+	  <p :class="{active: true, valid: false}">text</p>
 	</div>
   </template>
   
