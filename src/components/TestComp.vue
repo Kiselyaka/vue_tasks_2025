@@ -10,18 +10,17 @@
   </script>
 
 <template>
-	<p :class="{ valid: isValid, disabled: isDisabled }">
-	  text
+	<div>
+		Задание 1:
+		<p :style="{color: 'green', 'background-color': 'yellow'}">
+		text
 	</p>
+	</div>
+	<div><br />
+		Задание 2:
+		<p :style="{'font-weight': 'bold', 'font-style': 'italic'}">
+		text
+	</p>
+	</div>
   </template>
 
-<style>
-  .valid {
-	color: green;
-  }
-  
-  .disabled {
-	color: gray; 
-	text-decoration: line-through; 
-  }
-</style>
