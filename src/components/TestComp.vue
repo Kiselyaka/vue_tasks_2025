@@ -32,46 +32,16 @@
   </script>
 
 <template>
-	<div>
-		Задание 1:
-	  <ul>
-		<li v-for="(elem, index) in arr" :key="index">{{ elem }}</li>
-	  </ul>
-	  <button @click="add">Add</button>
-	</div>
-	<div>
-		Задание 2:
-    <ul>
-      <li v-for="(elem, index) in arr" :key="index">{{ elem }}</li>
-    </ul>
-    <button @click="removeFirst">Remove First</button>
-  </div>
-  <div>
-	Задание 3:
-    <ul>
-      <li v-for="(elem, index) in arr" :key="index">{{ elem }}</li>
-    </ul>
-    <button @click="removeLast">Remove Last</button>
-  </div>
-  <div>
-	Задание 4:
-    <ul>
-      <li v-for="(elem, index) in arr" :key="index">{{ elem }}</li>
-    </ul>
-    <button @click="removeSecondLast">Remove Second Last</button>
-  </div>
-  <div>
-	Задание 5:
-    <ul>
-      <li v-for="(elem, index) in arr" :key="index">{{ elem }}</li>
-    </ul>
-    <button @click="sortArray">Sort</button>
-  </div>
-  <div>
-	Задание 6:
-    <ul>
-      <li v-for="(elem, index) in arr" :key="index">{{ elem }}</li>
-    </ul>
-    <button @click="reverseArray">Reverse</button>
-  </div>
-  </template>
+	<p>
+		1
+	</p> <br />
+	<p>
+		2
+	</p>
+</template>
+
+<style>
+p {
+	color: red;
+}
+</style>
