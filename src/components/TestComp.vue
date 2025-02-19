@@ -3,7 +3,10 @@
 export default {
   data() {
 	return {
-	  cssClasses: ['active', 'valid'],
+		obj: {
+			done: true,
+			selected:  false,
+		},
   }
   }
 };
@@ -13,22 +16,5 @@ export default {
 </script>
 
 <template>
-  <div> <br />	
-  <p :class="cssClasses">
-	  1
-  </p> <br />
-  <p :class="cssClasses">
-	  2
-  </p>
-  </div>
+	<p :class="obj">text</p>
 </template>
-
-<style>
-.active {
-color: green;
-}
-
-.valid {
-font-weight: bold;
-}
-</style>
