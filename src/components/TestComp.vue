@@ -1,26 +1,36 @@
 <script>
-    export default {
+  export default {
 	data() {
 	  return {
-		isValid: true,    
-		isDisabled: false, 
+		message: 'hello',
+		number: 0,
 	  };
 	},
+	computed: {
+    upperCaseMessage() {
+      return this.message.toUpperCase();
+    },
+	squaredNumber() {
+      return this.number * this.number;
+    },
+  },
   };
   </script>
 
 <template>
 	<div>
-		Задание 1:
-		<p :style="{color: 'green', 'background-color': 'yellow'}">
-		text
-	</p>
+		Задача 1:
+	  <input v-model="message">
+	  <p>{{ message }}</p>
 	</div>
-	<div><br />
-		Задание 2:
-		<p :style="{'font-weight': 'bold', 'font-style': 'italic'}">
-		text
-	</p>
-	</div>
+	<div>
+		Задача 2:
+    <input v-model="message">
+    <p>{{ upperCaseMessage }}</p>
+  </div>
+  <div>
+	Задача 3:
+    <input type="number" v-model.number="number">
+    <p>{{ squaredNumber }}</p>
+  </div>
   </template>
-
