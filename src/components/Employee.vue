@@ -1,7 +1,7 @@
 <script>
 	export default {
 	props: {
-		firstName: String, 
+		name: String, 
 		lastName: String,  
 		age: Number,       
 		position: String,  
@@ -17,9 +17,9 @@
 </script>
 
 <template>
-    <ul>
-	<li>{{ arg1 }}</li>
-	<li>{{ arg2 }}</li>
-    <li>{{ arg3 }}</li>
-    </ul>
-</template>
+	<div>
+	  <h2>{{ name }}</h2>
+	  <p>Salary: {{ salary }}</p>
+	  <p>Age: {{ age }}</p>
+	</div>
+  </template>
