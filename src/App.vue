@@ -7,24 +7,21 @@ export default {
 		return {		
 	}
 		},
-	methods: {
-    handle(name) {
-      console.log(name);
-    },
-    handleWithSalary(name, salary) {
-      console.log(name, salary);
-    },
-},
+		methods: {
+    handleMyEvent(param1, param2) {
+      console.log('Получены данные:', param1, param2);
+    }
+  	},
 		components: {
 			TestComp,
-      Employee
+      		Employee
 		}
 	}
 </script>
 
 <template>
-	<TestComp />
-  <Employee  @show="handle" @show2="handleWithSalary" />
+<TestComp />
+<Employee  @my-event="handleMyEvent" /> 
 </template>
 
 
