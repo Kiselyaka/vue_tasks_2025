@@ -1,6 +1,6 @@
 <script>
 	export default {
-        props: ['arg'],
+        props: ['arg1', 'arg2', 'arg3'],
 		data() {
 			return {
 				
@@ -11,8 +11,8 @@
 
 <template>
     <ul>
-	<li>{{ arg[0] }}</li>
-	<li>{{ arg[1] }}</li>
-    <li>{{ arg[2] }}</li>
+	<li>{{ arg1 }}</li>
+	<li>{{ arg2 }}</li>
+    <li>{{ arg3 }}</li>
     </ul>
 </template>

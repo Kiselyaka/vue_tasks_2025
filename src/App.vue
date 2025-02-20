@@ -6,7 +6,9 @@
 	export default {
 		data() {
 			return {
-				
+				name: 'john',
+		    salary: '50000',
+        age: '28'
 			}
 		},
 		components: {
@@ -18,7 +20,7 @@
 
 <template>
 	<TestComp />
-  <Employee :arg="[1, 2, 3]" />
+  <Employee :arg1="name" :arg2="salary" :arg3="age" />
 </template>
 
 
