@@ -7,13 +7,13 @@ export default {
 		return {		
 	}
 		},
-		methods: {
-	func1() {
-		alert('первая функция');
-	},
-	func2(){
-		alert('вторая функция')
-	}
+	methods: {
+    handle(name) {
+      console.log(name);
+    },
+    handleWithSalary(name, salary) {
+      console.log(name, salary);
+    },
 },
 		components: {
 			TestComp,
@@ -24,7 +24,7 @@ export default {
 
 <template>
 	<TestComp />
-  <Employee @show1="func1" @show2="func2"/>
+  <Employee  @show="handle" @show2="handleWithSalary" />
 </template>
 
 

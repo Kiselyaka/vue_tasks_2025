@@ -1,33 +1,29 @@
 <script>
 	export default {
-		emits: ['show1', 'show2'],
-	props: {
-		name: String, 
-		lastName: String,  
-		age: Number,       
-		position: String,  
-		salary: Number,     
-		isFullTime: Boolean 
-	},
-	data() {
-		return {
-			
-		}
-	},
+	emits: ['show', 'show2'],
 	methods: {
-	handle1() {
-		this.$emit('show1');
-	},
-	handle2() {
-		this.$emit('show2');
-	}
-}
+    sendName() {
+      const name = 'Работник 1'; 
+      this.$emit('show', name);
+    },
+	sendNameAndSalary() {
+      const name = 'Работник 2'; 
+      const salary = '50000'; 
+      this.$emit('show2', name, salary);
+    },
+  },
 }
 </script>
 
 <template>
 	<div>
-		<button @click="handle1">btn1</button>
-		<button @click="handle2">btn2</button>
+		Задача 1:
+		<button @click="sendName">Отправить имя работника</button>
 	</div>
+		<div>
+			Задача 2:
+    <button @click="sendName">Отправить имя работника</button>
+    <button @click="sendNameAndSalary">Отправить имя и зарплату работника</button>
+  </div>
+	
   </template>
