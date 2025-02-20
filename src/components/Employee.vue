@@ -1,6 +1,6 @@
 <script>
 	export default {
-        props: ['name', 'surn'],
+        props: ['arg'],
 		data() {
 			return {
 				
@@ -10,6 +10,9 @@
 </script>
 
 <template>
-	{{ name }}
-	{{ surn }}
+    <ul>
+	<li>{{ this.arg[0] }}</li>
+	<li>{{ this.arg[1] }}</li>
+    <li>{{ this.arg[2] }}</li>
+    </ul>
 </template>

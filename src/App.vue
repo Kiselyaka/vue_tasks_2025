@@ -19,7 +19,7 @@
 <template>
 	<TestComp />
   <Employee />
-  <Employee name="john" surn="smit" />
+  <Employee :arg="[1, 2, 3]" />
 </template>
 
 
