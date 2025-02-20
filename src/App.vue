@@ -19,6 +19,7 @@
 <template>
 	<TestComp />
   <Employee />
+  <Employee name="john" surn="smit" />
 </template>
 
 
