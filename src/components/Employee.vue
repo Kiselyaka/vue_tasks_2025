@@ -1,12 +1,19 @@
 <script>
 	export default {
-        props: ['arg1', 'arg2', 'arg3'],
-		data() {
-			return {
-				
-			}
+	props: {
+		firstName: String, 
+		lastName: String,  
+		age: Number,       
+		position: String,  
+		salary: Number,     
+		isFullTime: Boolean 
+	},
+	data() {
+		return {
+			
 		}
 	}
+}
 </script>
 
 <template>
