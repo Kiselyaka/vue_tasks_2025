@@ -18,7 +18,6 @@
 
 <template>
 	<TestComp />
-  <Employee />
   <Employee :arg="[1, 2, 3]" />
 </template>
 

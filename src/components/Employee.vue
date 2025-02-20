@@ -11,8 +11,8 @@
 
 <template>
     <ul>
-	<li>{{ this.arg[0] }}</li>
-	<li>{{ this.arg[1] }}</li>
-    <li>{{ this.arg[2] }}</li>
+	<li>{{ arg[0] }}</li>
+	<li>{{ arg[1] }}</li>
+    <li>{{ arg[2] }}</li>
     </ul>
 </template>
