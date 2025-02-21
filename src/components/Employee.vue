@@ -1,6 +1,11 @@
 <script>
 	export default {
-	emits: ['my-event'],
+	props: {
+	id:     Number,
+	name:   String,
+	surn:   String,
+  },
+  emits: ['remove'],
 	methods: {
     emitEvent() {
       this.$emit('my-event', 'bim-bim', 'bam-bam');
@@ -11,10 +16,10 @@
 </script>
 
 <template>
-	<div>
-		<button @click="emitEvent">
-      Кликни меня
-    </button>
-  </div>
+	{{ name }}
+	{{ surn }}
 	
-  </template>
+	<button @click="$emit('remove', id)">
+		remove
+	</button>
+</template>
