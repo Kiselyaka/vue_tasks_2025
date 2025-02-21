@@ -25,10 +25,14 @@ export default {
 	}
 		},
 		methods: {
-			remove(id) {
-		this.users = this.users.filter((user) => {
-			return user.id !== id;
-		})
+			change(id, name, surn) {
+		this.users = this.users.map((user) => {
+			if (user.id === id) {
+				user.name = name;
+				user.surn = surn;
+			}
+			return user;
+		});
 	}
   	},
 		components: {
@@ -44,8 +48,8 @@ export default {
 		:id     ="user.id"
 		:name   ="user.name"
 		:surn   ="user.surn"
-		@remove ="remove"
 		:key    ="user.id"
+		@change="change"
 	/>
 </template>
 
