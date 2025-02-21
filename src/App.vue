@@ -2,6 +2,7 @@
 import Employee from './components/Employee.vue';
 import TestComp from './components/TestComp.vue';
 import UserForm from './components/UserForm.vue';
+import Checklist from './components/Checklist.vue';
 
 export default {
 	data() {
@@ -47,21 +48,29 @@ export default {
 		components: {
 			TestComp,
       		Employee,
-			UserForm
+			UserForm,
+			Checklist
 		}
 	}
+// я же узнаю, что ты у меня взял
 </script>
 
-<template>
-<TestComp />
-<Employee  v-for   ="user in users"
-		:id     ="user.id"
-		:name   ="user.name"
-		:surn   ="user.surn"
-		:key    ="user.id"
-		@change="change"
-	/>
-	<UserForm @add="add" />
+<template>	
+	<Checklist></Checklist>
 </template>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, sans-serif; 
+  background-color: #f5f5dc; 
+  color: #2c3e50;
+  text-align: left;
+  padding: 20px;
+}
+
+body{
+	background-color: beige;
+}
+</style>
 
 
