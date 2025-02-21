@@ -1,7 +1,8 @@
 <script>
 import Employee from './components/Employee.vue';
 import TestComp from './components/TestComp.vue';
-	
+import UserForm from './components/UserForm.vue';
+
 export default {
 	data() {
 		return {
@@ -25,7 +26,15 @@ export default {
 	}
 		},
 		methods: {
-			change(id, name, surn) {
+			add(name, surn) {
+		let id = this.users.length + 1;
+		this.users.push({
+			id,
+			name,
+			surn
+		});
+	},
+	change(id, name, surn) {
 		this.users = this.users.map((user) => {
 			if (user.id === id) {
 				user.name = name;
@@ -37,7 +46,8 @@ export default {
   	},
 		components: {
 			TestComp,
-      		Employee
+      		Employee,
+			UserForm
 		}
 	}
 </script>
@@ -51,6 +61,7 @@ export default {
 		:key    ="user.id"
 		@change="change"
 	/>
+	<UserForm @add="add" />
 </template>
 
 
